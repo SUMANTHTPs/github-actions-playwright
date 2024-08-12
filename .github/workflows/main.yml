@@ -1,4 +1,4 @@
-name: Amazon playwright Tests
+name: Playwright Tests
 
 on:
   push:
@@ -27,5 +27,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
-    - name: Run Playwright Tests
-      run: npx playwright test
+    - name: Run Playwright Tests in Headless Mode
+      run: npx playwright test --headless
+      env:
+        PLAYWRIGHT_TEST_BASE_URL: https://www.amazon.in/
