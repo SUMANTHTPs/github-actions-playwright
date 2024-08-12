@@ -28,6 +28,6 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Run Playwright Tests in Headless Mode
-      run: npx playwright test --headless
+      run: npx playwright test
       env:
         PLAYWRIGHT_TEST_BASE_URL: https://www.amazon.in/
