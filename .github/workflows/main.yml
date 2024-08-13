@@ -12,6 +12,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:  # Job-specific environment variables
+      email: ${{ secrets.EMAIL }}
+      password: ${{ secrets.PASSWORD }}
+      
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
