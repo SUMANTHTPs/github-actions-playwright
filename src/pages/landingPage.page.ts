@@ -26,9 +26,9 @@ export class LandingPage {
   public async signIn() {
     await this.page.getByText("Sign in").last().click();
     await this.page.waitForLoadState();
-    await this.page.locator(selectors.email).fill(getConfig().email);
+    await this.page.locator(selectors.email).fill(process.env.email ?? getConfig().email);
     await this.page.locator(selectors.continue).last().click();
-    await this.page.locator(selectors.password).fill(getConfig().password);
+    await this.page.locator(selectors.password).fill(process.env.password ?? getConfig().password);
     await this.page.locator(selectors.signInSubmitButton).last().click();
     await this.page.waitForLoadState();
     expect(await this.page.title()).toContain(Constants.AMAZON);
