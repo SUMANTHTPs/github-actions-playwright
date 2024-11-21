@@ -29,4 +29,6 @@ jobs:
       run: npm install
     - name: Playwright test runner
       uses: SUMANTHTPs/playwright-action@1.1.7
+      with:
+        workers: "2"
         
