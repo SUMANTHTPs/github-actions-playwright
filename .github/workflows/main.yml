@@ -28,5 +28,5 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Playwright test runner
-      uses: SUMANTHTPs/playwright-action@1.1.0
+      uses: SUMANTHTPs/playwright-action@1.1.1
         
